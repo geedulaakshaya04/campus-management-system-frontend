@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const BACKEND_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://campus-management-system-backend-qo9f.onrender.com';
+
 const api = axios.create({
-  baseURL: '/api',
+  baseURL: `${BACKEND_BASE_URL}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
